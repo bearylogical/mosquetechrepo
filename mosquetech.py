@@ -25,9 +25,12 @@ class Tabung(db.Model):
     timestamp = db.Column(db.Integer)
     device_id = db.Column(db.Integer, db.ForeignKey('deviceList.id'))
 
+
+
+
 api_manager =  APIManager(app, flask_sqlalchemy_db=db)
 api_manager.create_api(Device,methods=['GET','POST','DELETE'])
-api_manager.create_api(Tabung,methods=['GET','POST','DELETE','PUT'])
+api_manager.create_api(Tabung,methods=['GET','POST','DELETE','PUT'],allow_functions=True)
 
 # @app.route('/')
 # def hello_world():
