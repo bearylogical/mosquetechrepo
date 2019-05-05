@@ -1,4 +1,4 @@
-.idea/dataSources.ids
+.idea/*
 .idea/dataSources.local.xml
 .idea/dataSources.xml
 __pycache__/config.cpython-35.pyc

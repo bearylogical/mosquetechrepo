@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mosque Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="50">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="bower_components/odometer/themes/odometer-theme-minimal.css"/>
+
+</head>
+<body ng-app="app" ng-controller="AppCtrl2 as app">
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="transaction">Transactions</a></li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">
+
+
+
+
+
+  <div class="row content">
+
+    <div class="col-sm-12 text-center">
+
+<img src="https://darulghufran.rezkii.com/wp-content/uploads/sites/30/2016/03/MDG-LOGO-2015.png"
+             style = "width:800px;height:160px;">
+        <hr>
+        <div ng-app="autoRefreshApp " ng-controller="autoRefreshController">
+        <h1>Total Donations: </h1>
+
+            <span class="dollar">$</span>
+            <ng-odometer value=" app.sum"></ng-odometer>
+
+        </div>
+    <div class="container">
+    <div ui-view></div>
+
+        <hr>
+        <div class = "gallery">
+        <div class="img">
+  <a target="_blank" href="fjords.jpg">
+    <img src="http://www.darulghufran.org/wp-content/uploads/sites/30/cm/2015/10/mdg-new-building-front-300x300.jpg" alt="Fjords" width="300" height="200">
+  </a>
+
+</div>
+
+<div class="img">
+  <a target="_blank" href="forest.jpg">
+    <img src="http://www.darulghufran.org/wp-content/uploads/sites/30/2016/05/Ramadan-Kareem-1437H-300x300.jpg" alt="Forest" width="300" height="200">
+  </a>
+
+</div>
+
+<div class="img">
+  <a target="_blank" href="lights.jpg">
+    <img src="http://www.darulghufran.org/wp-content/uploads/sites/30/2016/06/Solat-Practical-Iqra-Clinic-v03-768x543.jpg" alt="Northern Lights" width="300" height="200">
+  </a>
+
+</div>
+
+<div class="img">
+  <a target="_blank" href="mountains.jpg">
+    <img src="http://www.darulghufran.org/wp-content/uploads/sites/30/2016/03/FREE-TAJWEED-CLASS-v03-768x543.jpg" alt="Mountains" width="300" height="200">
+  </a>
+
+</div>
+            <div class="img">
+  <a target="_blank" href="mountains.jpg">
+    <img src="http://www.darulghufran.org/wp-content/uploads/sites/30/2016/05/Ramadan-Volunteers-Poster-768x543.jpg" alt="Mountains" width="300" height="200">
+  </a>
+
+</div>
+
+</div>
+        </div>
+    </div>
+
+
+  </div>
+</div>
+    <div ng-view></div>
+
+
+
+
+
+<footer class="container-fluid text-center">
+  <div ng-app="app" ng-controller="MyController">
+        <span>{{CurrentDate | date:'dd/MM/yyyy'}}</span>
+        <span>{{CurrentDate | date:'hh:mm:ss a'}}</span>
+
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+   <script src="bower_components/odometer/odometer.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="js/app.js"></script>
+<script src="bower_components/angular-odometer-js/dist/angular-odometer.js"></script>
+
+</body>
+</html>
+
